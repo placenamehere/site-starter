@@ -9,16 +9,32 @@
 	<meta name="keywords" content="<?=$pageMetaKeywords;?>">
 	<meta name="author" content="">
 	
-	<link href="/css/reset.css" rel="stylesheet">
-	<link href="/css/global.css" rel="stylesheet">
-	<?php
-	if (isset($pageAssets)) {
-		foreach($pageAssets['css'] as $css) { ?>
-	<link href="/css/<?=$css;?>" rel="stylesheet">
-		<?
+	
+	<?php if (is_dev()): ?>
+		<!-- unminimized CSS -->
+		<link href="/css/reset.css" rel="stylesheet">
+		<link href="/css/global.css" rel="stylesheet">
+		<?php
+		if (isset($pageAssets)) {
+			foreach($pageAssets['css'] as $css) { ?>
+		<link href="/css/<?=$css;?>.css" rel="stylesheet">
+			<?
+			}
 		}
-	}
-	?>
+		?>
+	<?php else: ?>
+		<!-- minimized CSS -->
+		<link href="/css/all.min.css" rel="stylesheet">
+		
+		<?php
+		if (isset($pageAssets)) {
+			foreach($pageAssets['css'] as $css) { ?>
+		<link href="/css/<?=$css;?>.min.css" rel="stylesheet">
+			<?
+			}
+		}
+		?>
+	<?php endif; ?>
 	
 	<!-- including dev build for html5 shim and all other behavior -->
 	<script src="/libs/modernizr/modernizr-2.0.6.js"></script>

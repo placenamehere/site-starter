@@ -9,6 +9,10 @@
 5. Duplicate `template.php` for each new template type or page you're building
 6. Maintain `reference.php` with comment markup patterns used in your project
 
+### JS/CSS Compression
+
+This package supports concatinated & minimized JS and CSS files. To rebuild the minimized versions of files run the script `minimize.sh` script in `util`. To view files with the uncompressed version of the files add the `?dev` query param onto page urls or create a `dev` cookie for your domain.
+
 ## Overview
 
 This is a lightweight template framework for quickly starting web site templates or prototypes, with an emphasis on file organization, defining template requirements, and emplying front end development best practics.
@@ -48,10 +52,8 @@ What it is not, is a PHP framework intended for use in a production environment.
 ## To Do
 
 * Additional inline documentation
-* Add licensing info
-* Migrate concatination, miniziation, and image optimization scripts into project
+* Migrate image optimization scripts into project
 * Add basic template utilities for managing project state, cache busting, cookie use, get/post variable inspection
-* Provide mock ajax request with success/error logic
 * Link to PNHTagTest from `reference.php`
 
 ## See Also
@@ -61,3 +63,16 @@ What it is not, is a PHP framework intended for use in a production environment.
 * [PNHTagTest](https://github.com/placenamehere/PNHTagTest) - useful document for reviewing stying of many HTML elements and markup patterns (include it in `reference.php`)
 * [HTML5 Boilerplate](https://github.com/paulirish/html5-boilerplate/) - more robust boilerplate for HTML5 site development, if you don't use it, read the source.
 * [HTML5 Reset](https://github.com/murtaugh/HTML5-Reset) - more simplified 'static' boilerplate for HTML5 site development
+
+
+## Copyright and Software License
+
+The MIT License
+
+Copyright (c) 2011 Chris Casciano
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

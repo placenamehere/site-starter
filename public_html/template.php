@@ -6,10 +6,11 @@
 	$pageMetaDesc = "";			// Meta desscription element value
 	$pageMetaKeywords = "";		// Meta tags element value
 	$pageAssets = array(
-		'css' 	=> array(),		// Any template specific CSS files. Refer to the base file name in the array. For instance, to include home.css, set 'css' = array('css')
-		'js'	=> array()		// Any template specific JS files. Refer to the base file name in the array. For instance, to include home.js, set 'js' = array('js');
+		'css' 	=> array(),		// Any template specific CSS files. Refer to the base file name in the array. For instance, to include home.css, set 'css' = array('home')
+		'js'	=> array()		// Any template specific JS files. Refer to the base file name in the array. For instance, to include home.js, set 'js' = array('home');
 	);
 ?>
+<?php include_once('inc/config.inc.php'); ?>
 <?php include_once('inc/header.inc.php'); ?>
 <!-- BEGIN PAGE SPECIFIC CONTENT AREA. PLACE CONTENTS OF div.main BELOW -->
 <!-- BEGIN PAGE SPECIFIC CONTENT AREA. PLACE CONTENTS OF div.main BELOW -->
